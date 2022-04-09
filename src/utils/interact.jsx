@@ -99,7 +99,7 @@ export const mintNFT = async (url, name, description) => {
     //make metadata
     const metadata = {};
     metadata.name = name;
-    metadata.image = url;
+    metadata.image = url.includes("https://ipfs.io/ipfs/") ? url : "https://ipfs.io/ipfs/" + url;
     metadata.description = description;
 
     //make pinata call
