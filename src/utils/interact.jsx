@@ -8,8 +8,6 @@ const web3 = createAlchemyWeb3(alchemyKey);
 const contractAddress = "0x17659481078dC8826c1c4c36117470ea262F2407";
 
 export const connectWallet = async () => {
-    useEffect(async () =>{
-    
     if (window.ethereum) {
         try {
             const addressArray = await window.ethereum.request({
@@ -43,8 +41,8 @@ export const connectWallet = async () => {
             ),
         };
     }
-}, [] )};
-    
+};
+
 export const getCurrentWalletConnected = async () => {
     if (window.ethereum) {
         try {
